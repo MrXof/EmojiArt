@@ -36,6 +36,7 @@ enum Sturldata: Transferable {
 }
 
 extension URL {
+  
   var imageURL: URL {
     if let queryItems = URLComponents(url: self, resolvingAgainstBaseURL: true)?.queryItems {
       for queryItem in queryItems {
@@ -46,6 +47,7 @@ extension URL {
     }
     return self
   }
+  
   var dataSchemeImageData: Data? {
     let urlString = absoluteString
     if urlString.hasPrefix("data:image") {

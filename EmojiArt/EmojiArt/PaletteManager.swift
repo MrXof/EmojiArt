@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct PaletteManager: View {
   let stores: [PaletteStore]
   
@@ -16,7 +14,7 @@ struct PaletteManager: View {
   
   var body: some View {
     NavigationSplitView {
-      List(stores, selection: $selectedStore) { store in
+      List(stores, selection: $selectedStore) { store in        
         PaletteStoreView(store: store)
           .tag(store)
       }
